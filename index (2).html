@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Adventure - Quiz de Matemática 6º Ano</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Tela Inicial -->
+    <section id="start-screen" class="screen active">
+        <header>
+            <h1>🎮 Math Adventure</h1>
+            <p class="subtitle">Aventura Matemática do 6º Ano</p>
+        </header>
+        <main>
+            <div class="card">
+                <p class="welcome-text">Olá, aventureiro(a)! Pronto para testar seus conhecimentos de Matemática?</p>
+                <label for="player-name">Digite seu nome:</label>
+                <input type="text" id="player-name" placeholder="Seu nome aqui..." maxlength="20" autocomplete="off">
+                <button id="start-btn" class="btn btn-primary">Começar Aventura! 🚀</button>
+                <p class="info-text">10 perguntas • 3 vidas • Divirta-se!</p>
+            </div>
+        </main>
+        <footer>
+            <p>Desenvolvido para alunos do 6º ano • Matemática</p>
+        </footer>
+    </section>
+
+    <!-- Tela do Jogo -->
+    <section id="game-screen" class="screen">
+        <header class="game-header">
+            <div class="player-info">
+                <span id="display-name">Jogador</span>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-label">Pontos</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Vidas</span>
+                    <span id="lives">❤️❤️❤️</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Pergunta</span>
+                    <span id="question-number">1/10</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="progress-bar">
+                <div id="progress" class="progress-fill"></div>
+            </div>
+
+            <div class="card question-card">
+                <h2 id="question-text">Pergunta aparece aqui</h2>
+                <div id="options-container" class="options">
+                    <!-- Opções geradas via JS -->
+                </div>
+            </div>
+
+            <div id="feedback" class="feedback hidden"></div>
+        </main>
+    </section>
+
+    <!-- Tela Final -->
+    <section id="end-screen" class="screen">
+        <header>
+            <h1 id="end-title">Fim de Jogo!</h1>
+        </header>
+        <main>
+            <div class="card end-card">
+                <div id="end-emoji" class="end-emoji">🎉</div>
+                <p id="end-message">Parabéns!</p>
+                <p class="final-score">Sua pontuação: <strong id="final-score">0</strong></p>
+                <p id="end-details"></p>
+                <button id="restart-btn" class="btn btn-primary">Jogar Novamente 🔄</button>
+            </div>
+        </main>
+        <footer>
+            <p>Math Adventure • 6º Ano</p>
+        </footer>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
